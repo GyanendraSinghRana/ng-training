@@ -1,0 +1,19 @@
+1) Create an angular application using CLI. 
+Create the following three components named HelloComponent, WelcomeComponent and DayComponent.
+ - HelloComponent should display the message : "Hello your_Name",
+ - WelcomeComponent should display the message : "Welcome to tarining_name"
+ - DayComponent should display the message : "Today is current_day"
+Use all above components in the parent component (i.e. app.component.ts)
+Note: Make sure that the above three components should belong to app.module.ts.
+
+2) Create a copy of the above application and make following changes to it.
+ - Place each component inside their separate modules i.e. 
+    - Place HelloComponent inside HelloModule
+    - Place WelcomeComponent inside WelcomeModule
+    - Place DayComponent inside DayModule
+
+3) Create an angular application using CLI. The component should define a Person interface having following fields: 
+name, age, address, email, isGraduate
+Create an array of 5 elements of type Person. Display the information of all Persons using angular in-built directive NgFor.
+
+4) Create a new Angular application in which print only those Persons who are graduates.
