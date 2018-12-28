@@ -2,8 +2,9 @@
 name, age, address, email, isGraduate
 Create an array of 5 elements of type Person. Display the information of all Persons using angular in-built directive NgFor.
 
-2) Create a new Angular application in which print only those Persons who are graduates.
+2) Create a new Angular application in which print only those Persons who are graduates. 
+Hint: Filter you Persons list in typescript section.(No need of NgIf)
 
-3) Create a new Angular application in which user will edit a textbox that is already populated with some initial text. Establish event binding for the event "change". 
+3) Create a new Angular application in which user will edit a textbox that is already populated with some initial text. Establish event binding for the event "input". 
 Show a message inside h3 tag "I am being edited" when the user starts editing. 
 Hide the message when the user has looses focus from textbox.
