@@ -1,0 +1,8 @@
+1) Creat an Angular application which contains two sections- A Top section and a bottom section.
+The top section should have two textboxes that allow users to add their name and city.
+A button below the text boxes adds name and city entered to a tabular view in the bottom section.
+
+
+2) Create a copy of the above application and style it using ng-bootstrap. 
+
+3) Create a copy of the first application and style it using angular material. 

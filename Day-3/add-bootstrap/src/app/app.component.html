@@ -1,0 +1,39 @@
+<div class="container">
+  <h1 class="text-centre">
+    Welcome to {{ title }}!
+  </h1>
+  <h2>Persons List</h2>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th>Person Name</th>
+        <th>Person Age</th>
+        <th>Person Address</th>
+        <th>Person Email</th>
+        <th>Person Education</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of personsList; let i =index" class="list">
+        <td>{{ i+1 }}</td>
+        <td>{{ person.name }}</td>
+        <td>{{ person.age }}</td>
+        <td>{{ person.address }}</td>
+        <td>{{ person.email }}</td>
+        <td>
+          <span *ngIf="person.isGraduate; else elseBlock">
+            Graduate
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+  <button (click)="showGraduateOnly()" placement="bottom" ngbTooltip="Click here to filter the list">Click Here</button>
+</div>
+
+
+<ng-template #elseBlock>
+  <span>UnderGraduate</span>
+</ng-template>
