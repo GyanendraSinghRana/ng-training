@@ -1,0 +1,3 @@
+1) Create two components ParentComponent and ChildComponent  in an angular application. When the application starts only parent component is shown. The parent component shows an employee's data and has a button to edit the data. 
+
+On clicking edit button, the child component is made visible. Clicking the edit button also lets the parent component send the employee object to the child component. The child component facilitates to edit employee data it has received from the parent.  The child component has a button that saves the edited employees's data. Clicking the save button (in child component) sends the employee object back to the parent component where it should be shown. Clicking the save button also hides the child component.
