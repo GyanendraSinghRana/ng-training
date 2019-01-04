@@ -1,0 +1,39 @@
+<div>
+  <h3>Template Driven form</h3>
+  <form name="form" (ngSubmit)="signUpForm.form.valid && onSubmit(signUpForm)" #signUpForm="ngForm" novalidate>
+    <div>
+      <label for="inputUsername">Enter username:</label>&nbsp;&nbsp;
+      <input type="text" id="inputUserName" name="uname" [(ngModel)]="model.username" #username="ngModel" required/>&nbsp;&nbsp;
+      
+      <span *ngIf="signUpForm.submitted && username.invalid">
+        <span *ngIf="username.errors.required">
+            User name is required.
+        </span>
+      </span>
+    </div><br>
+    <div>
+      <label for="inputEmail">Enter email:</label>&nbsp;&nbsp;
+      <input type="text" id="inputEmail" name="uemail" [(ngModel)]="model.email" #useremail="ngModel" required email/>&nbsp;&nbsp;
+      
+      <span *ngIf="signUpForm.submitted && useremail.invalid">
+          <span *ngIf="useremail.errors.required">
+              Email is required.
+          </span>
+          <span *ngIf="useremail.errors.email">
+              Email should be valid.
+          </span>
+        </span>
+    </div>
+    <br>
+    <div>
+      <button>Register</button>
+    </div>
+  </form>
+</div>
+
+<hr>
+
+<div *ngIf="signUpForm.form.valid && isSubmitted">
+  <div>Username: {{ model.username }}</div>
+  <div>Email: {{ model.email }}</div>
+</div>

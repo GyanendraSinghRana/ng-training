@@ -1,0 +1,39 @@
+<div>
+  <h3>Reactive form</h3>
+  <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="inputUsername">Enter username:</label>&nbsp;&nbsp;
+      <input type="text" id="inputUserName" formControlName="username"/>&nbsp;&nbsp;
+      
+      <span *ngIf="submitted && myform.username.errors">
+        <span *ngIf="myform.username.errors.required">
+            User name is required.
+        </span>
+      </span>
+    </div><br>
+    <div>
+      <label for="inputEmail">Enter email:</label>&nbsp;&nbsp;
+      <input type="text" id="inputEmail" formControlName="useremail"/>&nbsp;&nbsp;
+      
+      <span *ngIf="submitted && myform.useremail.errors">
+          <span *ngIf="myform.useremail.errors.required">
+              Email is required.
+          </span>
+          <span *ngIf="myform.useremail.errors.email">
+              Email should be valid.
+          </span>
+        </span>
+    </div>
+    <br>
+    <div>
+      <button>Register</button>
+    </div>
+  </form>
+</div>
+
+<hr>
+
+<div *ngIf="submitted && formvalid">
+  <div>Username: {{ name }}</div>
+  <div>Email: {{ email }}</div>
+</div>

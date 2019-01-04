@@ -1,0 +1,8 @@
+<h1>Employees</h1>
+
+<ol *ngIf="employees">
+  <li *ngFor="let emp of employees.data">
+    <img [src]="emp.avatar">
+    <h5>{{ emp.first_name }} {{ emp.last_name }}</h5>
+  </li>
+</ol>
