@@ -1,0 +1,72 @@
+<div class="reglist">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>DOB</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let registration of registrations; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ registration.firstName | uppercase }}</td>
+        <td>{{ registration.lastName | uppercase }}</td>
+        <td>{{ registration.dob }}</td>
+        <td>{{ registration.email }}</td>
+        <td>
+            <button type="button" class="btn btn-info" routerLink="/details/{{ i }}">Details</button>
+          </td>
+        <td>
+          <button type="button" class="btn btn-info" (click)="onEdit(i)">Edit</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="onDelete(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-right">
+    <button type="submit" class="btn btn-primary" (click)="onNew()">New</button>
+  </div>
+</div>
+
+<!-- Edit/Add User  -->
+
+<div class="regentry" *ngIf="showNew">
+  <h2 class="text-center">{{ submitType === 'Save'? 'Register New User' : 'Edit User' }}</h2>
+  <br>
+  <form (ngSubmit)="onSave()">
+    <div class="form-group row">
+      <label for="firstname-input" class="col-2 col-form-label">First Name</label>
+      <div class="col-10">
+        <input class="form-control" type="text" [(ngModel)]="regModel.firstName" name="firstName" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="lastname-input" class="col-2 col-form-label">Last Name</label>
+      <div class="col-10">
+        <input class="form-control" type="text" [(ngModel)]="regModel.lastName" name="lastName" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="dob-input" class="col-2 col-form-label">DOB</label>
+      <div class="col-3 input-group">
+        <input class="form-control" type="text" [(ngModel)]="regModel.dob" name="dob" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-email-input" class="col-2 col-form-label">Email</label>
+      <div class="col-10">
+        <input class="form-control" type="email" [(ngModel)]="regModel.email" name="email" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">{{submitType}}</button>&nbsp;
+    <button type="submit" class="btn btn-primary" (click)="onCancel()">Cancel</button>
+  </form>
+</div>

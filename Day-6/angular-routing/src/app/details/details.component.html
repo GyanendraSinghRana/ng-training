@@ -1,0 +1,14 @@
+<div class="regdetails">
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, {{ registration.firstName }}</h1>
+        <p class="lead">Below are the details:</p>
+        <hr class="my-4">
+        <p><strong>First Name:</strong> {{ registration.firstName }}</p>
+        <p><strong>Last Name:</strong> {{ registration.lastName }}</p>
+        <p><strong>DOB:</strong> {{ registration.dob }}</p>
+        <p><strong>Email:</strong> {{ registration.email }}</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" (click)="goBack()" role="button">Go Back</a>
+        </p>
+      </div>
+</div>

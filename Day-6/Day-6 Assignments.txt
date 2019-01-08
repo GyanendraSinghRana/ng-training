@@ -1,0 +1,20 @@
+Angular Training : Final Assignment
+
+Create an Angular Application for a car manufacturer. Your application will have following pages-
+
+a) Car model list page - This page will show a list of car models with their model name and model year.
+Each row on the page represents a model and the row contains Edit, Delete and View buttons. Below the list provide a Add button to add a new Model.
+
+b) Model display page - This page will be shown on clicking the "View" button on a perticular model row in the model list page. This page will show these fields: Model Name, Model Year, Engine capacity, Colors available, Transmission mode, Car type(Sedan, Hatchback, SUV) and Price.
+
+c) Model add page - This page will allow to add a new model. Users come to this page by clicking "Add" button on model list page. Each model will have the following fields: Model Name, Model Year, Engine capacity, Colors available, Transmission mode, Car type(Sedan, Hatchback, SUV) and Price.
+
+d) Model edit page - This page will allow users to edit a perticular model from the model list page. 
+This page will have the following fields: Model Name, Model Year, Engine capacity, Colors available, Transmission mode, Car type(Sedan, Hatchback, SUV) and Price.
+
+e) On clicking the "Delete" button on the model list page, show a modal confirmation popup and then delete the selected model from the list.
+
+f) On top right corner of the list page show Login/Logout buttons. Clicking the login button will take the user to login page. Keep the login credentials hardcoded as admin/admin. Only logged in users should be allowed to  add, edit or delete a model. Guest users(Those who have not logged in) will only be able to see the model list and model display pages.
+
+Note: Use angular router to navigate through all the pages. Model add & edit pages should have Form validations.
+Nice to have feature: Make http calls to get model list from server and post edited data back to the server. If you opt not to implment this feature you can store model data inside an object array within a service.
